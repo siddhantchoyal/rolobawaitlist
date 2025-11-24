@@ -16,7 +16,8 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
         </div>
 
         <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl mb-6 max-w-4xl">
-          Run Your Service Business On <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500">Autopilot</span>
+          Generate, capture & convert <br className="hidden sm:block"/>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500">local leads on autopilot.</span>
         </h1>
         
         <p className="mt-4 text-xl text-slate-500 max-w-2xl mx-auto mb-10">
