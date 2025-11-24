@@ -68,7 +68,7 @@ function App() {
       <main className="flex-grow">
         
         {/* HERO SECTION */}
-        <section className="relative pt-12 pb-24 lg:pt-24 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
+        <section id="home" className="relative pt-12 pb-24 lg:pt-24 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
           
           {/* Grid Background Pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none z-0"></div>
@@ -103,6 +103,7 @@ function App() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    aria-label="Email address"
                   />
                   <button 
                     type="submit" 
@@ -123,7 +124,7 @@ function App() {
         </section>
 
         {/* FEATURES GRID */}
-        <section className="bg-white py-24 border-t border-brand-sage/10">
+        <section id="features" className="bg-white py-24 border-t border-brand-sage/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-extrabold text-brand-dark sm:text-4xl mb-4">Why Roloba?</h2>
