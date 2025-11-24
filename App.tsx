@@ -79,8 +79,8 @@ function App() {
             </span>
             
             <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-brand-dark mb-8 leading-[1.1]">
-              The Operating System That <br className="hidden sm:block"/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-brand-sage">Hunts For Business.</span>
+              Generate, capture & convert <br className="hidden sm:block"/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-brand-sage">local leads on autopilot.</span>
             </h1>
             
             <p className="text-xl sm:text-2xl text-brand-dark/70 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
