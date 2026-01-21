@@ -3,26 +3,30 @@ import { FEATURES } from '../constants';
 
 const Features: React.FC = () => {
   return (
-    <section id="features" className="py-24 bg-slate-50">
+    <section id="features" className="py-24 bg-brand-cream border-t border-brand-sage/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-base text-primary-600 font-semibold tracking-wide uppercase">Everything You Need</h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            Replace 5 Different Subscriptions with Roloba
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-base text-brand-green font-black tracking-[0.3em] uppercase mb-4">The Engine</h2>
+          <p className="text-4xl leading-tight font-black tracking-tight text-brand-dark sm:text-6xl">
+            Everything You Need <br/> To Own Your Market.
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-slate-500 mx-auto">
-            Stop paying for a separate CRM, Website Builder, Social Media Manager, and Lead Agency. We do it all for one flat price.
+          <p className="mt-6 max-w-2xl text-xl text-brand-dark/60 mx-auto font-medium">
+            Most agencies charge you for "leads" that are shared with 5 other guys. We land you exclusive jobs and only bill when the work is done.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {FEATURES.map((feature) => (
-            <div key={feature.id} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-100 flex flex-col">
-              <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-primary-100 text-primary-600 mb-6">
-                <feature.icon size={28} strokeWidth={1.5} />
+            <div key={feature.id} className="bg-white rounded-[2rem] p-10 shadow-xl hover:shadow-2xl transition-all border border-brand-green/5 flex flex-col group hover:-translate-y-2 duration-300">
+              <div className="flex items-center justify-center h-16 w-16 rounded-2xl bg-brand-green/10 text-brand-green mb-8 group-hover:bg-brand-green group-hover:text-white transition-all duration-300 shadow-inner">
+                <feature.icon size={32} strokeWidth={2.5} />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-              <p className="text-slate-500 leading-relaxed flex-grow">{feature.description}</p>
+              <h3 className="text-2xl font-black text-brand-dark mb-4">{feature.title}</h3>
+              <p className="text-brand-dark/60 leading-relaxed flex-grow font-medium">{feature.description}</p>
+              
+              <div className="mt-8 pt-6 border-t border-brand-green/5">
+                <span className="text-xs font-black text-brand-green uppercase tracking-widest">Performance Active</span>
+              </div>
             </div>
           ))}
         </div>

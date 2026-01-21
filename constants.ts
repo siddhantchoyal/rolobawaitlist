@@ -1,177 +1,144 @@
 import { 
-  PhoneCall, 
-  MessageSquare, 
-  Video, 
-  Globe, 
-  TrendingUp, 
-  Smartphone, 
   Calendar, 
-  BarChart3,
-  CreditCard,
-  Star,
-  LayoutTemplate,
-  Users
+  MapPin,
+  Trees,
+  Search,
+  ShieldCheck,
+  TrendingUp,
+  DollarSign,
+  UserCheck,
+  Gift
 } from 'lucide-react';
 import { Feature, PricingTier, Testimonial, CaseStudy } from './types';
 
-export const ROLOBA_SYSTEM_PROMPT = `
-You are the AI Sales Assistant for Roloba. 
-Roloba is the ultimate Operating System for home service businesses (plumbers, HVAC, landscapers, roofers, etc.).
-We combine traditional SaaS tools (Website, Booking, Payments) with ACTIVE Lead Generation.
-
-Your Goal: Convince the user to schedule a demo or start a trial.
-
-Key Value Proposition:
-- We don't just manage your business; we GROW it by actively hunting for leads.
-- Price: $197/month flat. No hidden fees.
-
-Core Differentiation (The "Roloba Advantage"):
-1. **Done-For-You Lead Gen**: 
-   - Commercial: We Cold Call and Cold Email property managers and businesses to get you big contracts.
-   - Residential: We target homeowners in your specific zip codes.
-   - Partnerships: We reach out to realtors and other contractors for referrals.
-2. **AI Workforce**: 
-   - Voice AI: Answers missed calls 24/7, books appointments, qualifies leads.
-   - Chat AI: Handles Webchat, SMS, Facebook, and Instagram DMs instantly.
-3. **Viral Local Marketing**: We create and post short-form video content (Reels/TikToks) for you.
-4. **White-Label App**: Your customers download *your* branded app (PWA) to book you easily.
-
-Standard Features (Included):
-- High-converting Website Builder
-- Online Scheduling & Dispatching
-- Invoicing & Payments
-- 5-Star Review Automation (Reputation Management)
-
-Tone: Professional, high-energy, confident, and helpful.
-Keep responses short and punchy.
-`;
-
 export const FEATURES: Feature[] = [
   {
-    id: 'lead-gen',
-    title: 'Active Lead Hunting',
-    description: 'We cold call businesses for commercial contracts and homeowners for residential jobs.',
-    icon: PhoneCall,
+    id: 'free-trial',
+    title: '3 Quotes on the House',
+    description: 'We book your first 3 residential estimates for free. No credit card required. Experience the caliber of our bookings before paying a dime.',
+    icon: Gift,
   },
   {
-    id: 'ai-voice',
-    title: 'AI Voice Receptionist',
-    description: 'An AI agent that sounds human answers missed calls 24/7 to book jobs while you sleep.',
-    icon: Smartphone,
+    id: 'precision-marketing',
+    title: 'Exclusive Removal Leads',
+    description: 'Proprietary omni-channel strategies to find homeowners ready for $2.5k+ removals. No shared leads—every prospect is 100% exclusive.',
+    icon: Search,
   },
   {
-    id: 'ai-chat',
-    title: 'Unified Inbox & Chat AI',
-    description: 'Auto-replies to leads on SMS, Website, Facebook, and Instagram to close deals instantly.',
-    icon: MessageSquare,
+    id: 'calendar-booking',
+    title: 'Direct Schedule Sync',
+    description: 'We qualify every homeowner and book the quote directly into your mobile calendar. Wake up and see your route filled with revenue.',
+    icon: Calendar,
   },
   {
-    id: 'viral-content',
-    title: 'DFY Viral Content',
-    description: 'We edit and post short-form videos to your socials to dominate your local market.',
-    icon: Video,
+    id: 'zero-risk',
+    title: '10% Performance Plan',
+    description: 'After your free trial, you only pay a 10% commission when you close a job and get paid. We only win when you grow.',
+    icon: ShieldCheck,
   },
   {
-    id: 'web-seo',
-    title: 'Website & Unlimited SEO',
-    description: 'A stunning website with unlimited blog posts and GBP updates to rank #1 on Google.',
-    icon: Globe,
+    id: 'wealthy-targeting',
+    title: 'Affluent Area Dominance',
+    description: 'We target specific zip codes where homeowners prioritize safety and expertise over the lowest price point.',
+    icon: MapPin,
   },
   {
-    id: 'app',
-    title: 'Your Custom App',
-    description: 'A downloadable mobile app (PWA) fully branded to your business for client retention.',
-    icon: TrendingUp,
+    id: 'roi-dashboards',
+    title: 'Total Transparency',
+    description: 'Weekly dashboards showing your ROI. Real-time access to every homeowner conversation we handle for you.',
+    icon: DollarSign,
   }
 ];
 
 export const CORE_SERVICES: Feature[] = [
   {
-    id: 'scheduling',
-    title: 'Smart Scheduling',
-    description: 'Drag-and-drop calendar that syncs with your team and allows customers to book online.',
+    id: 'marketing',
+    title: 'Local Authority',
+    description: 'We build your reputation as the elite residential choice in your county through aggressive outreach.',
+    icon: Trees,
+  },
+  {
+    id: 'qualification',
+    title: 'Strict Qualification',
+    description: 'We filter out small trims and "just curious" callers to focus on high-margin residential removals.',
+    icon: UserCheck,
+  },
+  {
+    id: 'booking',
+    title: 'Ready-to-Quote Booking',
+    description: 'Quotes are placed directly in your calendar with full project details and homeowner notes attached.',
     icon: Calendar,
   },
   {
-    id: 'payments',
-    title: 'Invoicing & Payments',
-    description: 'Send professional estimates and invoices. Get paid faster with text-to-pay.',
-    icon: CreditCard,
-  },
-  {
-    id: 'reviews',
-    title: 'Review Automation',
-    description: 'Automatically request reviews after every job to build your 5-star reputation.',
-    icon: Star,
-  },
-  {
-    id: 'website',
-    title: 'Website Builder',
-    description: 'Launch a high-converting, mobile-friendly website in minutes, not weeks.',
-    icon: LayoutTemplate,
+    id: 'success',
+    title: 'Scalable ROI',
+    description: 'Get your first 3 quotes free, then a flat 10% after you close. No monthly retainers, ever.',
+    icon: TrendingUp,
   }
 ];
 
 export const PRICING: PricingTier = {
-  name: 'The All-In-One Growth Plan',
-  price: '$197',
-  period: '/month',
-  cta: 'Start 14-Day Free Trial',
+  name: 'Performance Partner',
+  price: '10%',
+  period: 'Per Closed Job',
+  cta: 'Claim Your 3 Free Quotes',
   popular: true,
   features: [
-    '**DFY Cold Calling (Commercial & Residential)**',
-    '**DFY Cold Email Campaigns**',
-    '**24/7 AI Voice Receptionist**',
-    'Unified AI Chat (Web, SMS, Socials)',
-    'DFY Short-Form Video Creation',
-    'Unlimited SEO Blog Posting',
-    'Your Own Branded Mobile App',
-    'Website Builder & Hosting',
-    'Scheduling, Invoicing & Payments',
-    'Review Management System'
+    '**First 3 Quotes 100% Free**',
+    '**Exclusive Residential Estimates**',
+    '**$0 Monthly Management Fee**',
+    '**No Setup or Onboarding Fees**',
+    'Wealthy Zip Code Hyper-Targeting',
+    'Direct Google/Apple Calendar Sync',
+    'High-Ticket Removal Pre-Qualification',
+    'Exclusive Territory Rights',
+    'Detailed Weekly Performance ROI',
+    'No Long-Term Contracts'
   ]
 };
 
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    name: 'Mike Henderson',
+    name: 'Jim Dawson',
     role: 'Owner',
-    business: 'Henderson Plumbing',
-    content: "I used Topline Pro for a year, but they just managed what I already had. Roloba actually brings me new work. The cold calling team landed me a contract with a local apartment complex that's worth $40k a year.",
+    business: 'Dawson Tree Experts',
+    content: "Roloba booked 3 quotes in my first week for free. All three were $3k+ removals. I've been on the performance plan since day one.",
     avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
     stars: 5
   },
   {
     id: '2',
-    name: 'Sarah Jenkins',
-    role: 'Founder',
-    business: 'Elite Cleaners',
-    content: "The AI voice receptionist is insane. I missed a call at 9 PM on a Friday, the AI picked up, sounded exactly like a person, and booked a $450 deep clean for Saturday morning. It paid for the subscription in one call.",
+    name: 'Sarah Miller',
+    role: 'Co-Founder',
+    business: 'ArborTech Services',
+    content: "No other agency puts their money where their mouth is. The free trial proved they can land $10k+ crane jobs consistently.",
     avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
     stars: 5
   },
   {
     id: '3',
-    name: 'Carlos Rodriguez',
-    role: 'CEO',
-    business: 'CR Landscaping',
-    content: "The viral video content is a game changer. I don't have time to make TikToks, but Roloba does it for me. We've gotten 30+ leads just from Instagram Reels in the last two months.",
-    avatar: 'https://randomuser.me/api/portraits/men/67.jpg',
+    name: 'Kevin Vance',
+    role: 'Operations Manager',
+    business: 'Vance Residential Tree',
+    content: "The calendar sync is a game changer. My estimator just follows the phone. We added $75k in new revenue last month alone.",
+    avatar: 'https://randomuser.me/api/portraits/men/62.jpg',
     stars: 5
   }
 ];
 
 export const FEATURED_CASE_STUDY: CaseStudy = {
-  business: "Apex Roofing & Exteriors",
-  industry: "Roofing Contractor",
-  challenge: "Stuck at $35k/month revenue. Relying purely on word-of-mouth and expensive Angi leads. Missed calls while on the roof.",
-  solution: "Roloba Commercial Cold Calling + AI Voice Receptionist.",
+  business: "Oak & Iron Tree Care",
+  industry: "Residential Tree Service",
+  challenge: "Struggling with low-quality shared leads and no predictable removal schedule.",
+  solution: "Strategic county-wide outreach focusing on hazard-tree removals for high-net-worth homeowners.",
   stats: [
-    { label: 'Monthly Revenue', value: '$115k', growth: '+228%' },
-    { label: 'Commercial Contracts', value: '4', growth: 'New' },
-    { label: 'Missed Call Booking', value: '92%', growth: '+80%' }
+    { label: 'Monthly Revenue', value: '$92k', growth: '+140%' },
+    { label: 'Quote Volume', value: '12/wk', growth: 'Exclusive' },
+    { label: 'Avg. Job Size', value: '$3,800', growth: '+45%' }
   ],
-  quote: "Roloba isn't just software, it's a sales team in a box. Their outreach team got us into 4 property management firms we'd been trying to reach for years.",
-  image: "https://picsum.photos/800/600?grayscale"
+  quote: "I tried the free trial as a skeptic. They booked three big removals in 48 hours. I haven't paid for a 'lead' since.",
+  image: "https://images.unsplash.com/photo-1542601906990-b4d3fb773b09?auto=format&fit=crop&q=80&w=1200"
 };
+
+export const ROLOBA_SYSTEM_PROMPT = `You are the Roloba AI Dispatcher...`;

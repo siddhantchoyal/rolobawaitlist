@@ -11,21 +11,27 @@ const Logo: React.FC<LogoProps> = ({ className = "", size = 40 }) => {
       <svg 
         width={size} 
         height={size} 
-        viewBox="0 0 40 44" 
+        viewBox="0 0 100 100" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
-        className="text-brand-green flex-shrink-0"
-        aria-label="Roloba Logomark"
+        className="flex-shrink-0"
+        aria-label="Roloba Tree Logo"
       >
-        <path fill="currentColor" d="M0 0h22v22H0z"/>
-        <path fill="currentColor" d="M0 22h22L0 44z"/>
-        <path fill="currentColor" d="M40 40H18V18c12.15 0 22 9.85 22 22z"/>
+        <rect width="100" height="100" rx="24" fill="#228b4e" fillOpacity="0.1" />
+        {/* Modern Stylized Tree */}
+        <path d="M50 20L75 55H25L50 20Z" fill="#2ecc71" />
+        <path d="M50 40L82 75H18L50 40Z" fill="#27ae60" />
+        <path d="M44 70H56V85H44V70Z" fill="#1a1a1a" />
+        <path d="M50 55L85 85H15L50 55Z" fill="#228b4e" />
       </svg>
       <span 
-        className={`font-[900] tracking-tighter text-brand-green uppercase ${size >= 32 ? 'text-4xl' : 'text-2xl'}`} 
-        style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
+        className={`font-black tracking-tighter text-brand-dark uppercase leading-none select-none ${size >= 32 ? 'text-4xl' : 'text-xl'}`} 
+        style={{ 
+          fontFamily: '"Plus Jakarta Sans", sans-serif',
+          letterSpacing: '-0.05em'
+        }}
       >
-        Roloba
+        ROLOBA<span className="text-brand-green">.</span>
       </span>
     </div>
   );

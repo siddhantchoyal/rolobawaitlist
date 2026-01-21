@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, PhoneCall } from 'lucide-react';
+import { ArrowRight, Check, Gift, Target, ShieldCheck } from 'lucide-react';
 
 interface HeroProps {
   onOpenModal: () => void;
@@ -7,97 +7,83 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
   return (
-    <div className="relative overflow-hidden bg-white pt-16 pb-32 lg:pt-24 lg:pb-40">
+    <section className="relative overflow-hidden bg-brand-cream pt-6 pb-12 lg:pt-20 lg:pb-32">
+      {/* Texture Layer */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/natural-paper.png")' }}></div>
+      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         
-        <div className="inline-flex items-center rounded-full bg-primary-50 px-3 py-1 text-sm font-semibold text-primary-600 ring-1 ring-inset ring-primary-600/20 mb-8 animate-fade-in-up">
-          <span className="mr-2 bg-primary-600 text-white rounded-full px-2 py-0.5 text-xs">New</span>
-          Now with AI Voice & Active Lead Gen
+        {/* Badges */}
+        <div className="flex flex-col sm:flex-row items-center gap-3 mb-8">
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-green/10 px-4 py-1.5 text-[9px] sm:text-xs font-black text-brand-green ring-1 ring-inset ring-brand-green/20 uppercase tracking-[0.2em]">
+                <Target size={14} className="text-brand-orange" />
+                #1 Growth Engine for Tree Pros
+            </div>
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-orange/10 px-4 py-1.5 text-[9px] sm:text-xs font-black text-brand-orange ring-1 ring-inset ring-brand-orange/20 uppercase tracking-[0.2em] shadow-sm">
+                <ShieldCheck size={14} />
+                1 Spot Per County
+            </div>
         </div>
 
-        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl mb-6 max-w-4xl">
-          Generate, capture & convert <br className="hidden sm:block"/>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500">local leads on autopilot.</span>
+        <h1 className="text-[2.6rem] sm:text-7xl lg:text-8xl font-black tracking-tighter text-brand-dark mb-6 sm:mb-8 leading-[0.9] uppercase max-w-5xl">
+          Exclusive <span className="text-brand-green italic">Residential</span><br />
+          Tree Jobs.
         </h1>
         
-        <p className="mt-4 text-xl text-slate-500 max-w-2xl mx-auto mb-10">
-          The only platform that manages your business AND brings you new customers. 
-          We handle the cold calling, content creation, and missed calls—so you can focus on the work.
+        <p className="mt-2 text-sm sm:text-xl text-brand-dark/70 max-w-3xl mx-auto mb-10 sm:mb-14 leading-relaxed font-bold px-4">
+           We find the homeowners. We book the quotes. You close the jobs. <br className="hidden md:block"/>
+           <span className="text-brand-dark block mt-2 font-black underline decoration-brand-green/30 decoration-4 underline-offset-4">Get your first 3 booked quotes for free to verify our quality.</span>
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 w-full justify-center mb-16">
-          <button 
-            onClick={onOpenModal}
-            className="inline-flex justify-center items-center px-8 py-4 border border-transparent text-lg font-medium rounded-full text-white bg-primary-600 hover:bg-primary-700 md:text-xl shadow-lg hover:shadow-primary-500/30 transition-all transform hover:-translate-y-1"
-          >
-            Start Growing Today
-            <ArrowRight className="ml-2 -mr-1 h-5 w-5" />
-          </button>
-          <button 
-            onClick={() => document.getElementById('ai-demo')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-flex justify-center items-center px-8 py-4 border border-slate-300 text-lg font-medium rounded-full text-slate-700 bg-white hover:bg-slate-50 md:text-xl transition-all"
-          >
-            View AI Demo
-          </button>
-        </div>
+        <div className="w-full max-w-xl mx-auto flex flex-col items-center gap-6 sm:gap-8 px-2">
+             <button 
+               onClick={onOpenModal}
+               className="w-full bg-brand-orange text-white rounded-[1.8rem] sm:rounded-[2.5rem] px-6 sm:px-12 py-5 sm:py-8 font-black text-lg sm:text-2xl hover:bg-secondary-600 transition-all transform hover:scale-[1.02] shadow-2xl shadow-brand-orange/40 flex flex-col items-center justify-center gap-1 uppercase tracking-wider"
+             >
+                <span className="flex items-center gap-3">
+                    Claim 3 Free Quotes
+                    <ArrowRight size={24} strokeWidth={3} className="hidden sm:block" />
+                </span>
+                <span className="text-[8px] sm:text-xs opacity-80 font-bold tracking-[0.1em] mt-0.5 sm:mt-1">Zero Retainers • Performance Only</span>
+             </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-slate-500">
-            <div className="flex items-center gap-2 justify-center">
-                <CheckCircle className="text-green-500 h-5 w-5" />
-                <span>No per-lead fees</span>
-            </div>
-            <div className="flex items-center gap-2 justify-center">
-                <CheckCircle className="text-green-500 h-5 w-5" />
-                <span>Replaces 5+ software tools</span>
-            </div>
-            <div className="flex items-center gap-2 justify-center">
-                <CheckCircle className="text-green-500 h-5 w-5" />
-                <span>Setup in 5 minutes</span>
-            </div>
-        </div>
-
-        {/* Abstract Dashboard Placeholder */}
-        <div className="mt-16 relative rounded-xl bg-slate-900 p-2 ring-1 ring-slate-900/10 shadow-2xl lg:-m-4 lg:rounded-2xl lg:p-4 w-full max-w-5xl mx-auto overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-secondary-500/20 opacity-50 group-hover:opacity-75 transition-opacity" />
-            <img 
-                src="https://picsum.photos/1200/800?grayscale&blur=2" 
-                alt="Roloba Dashboard Interface" 
-                className="rounded-md shadow-2xl ring-1 ring-white/10 w-full object-cover opacity-90"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-white/90 backdrop-blur p-6 rounded-xl shadow-xl max-w-sm text-left border border-slate-200 transform transition-transform hover:scale-105">
-                    <div className="flex items-center gap-3 mb-4">
-                        <div className="h-10 w-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 animate-pulse">
-                            <PhoneCall size={20} />
-                        </div>
-                        <div>
-                            <p className="font-bold text-slate-900">Incoming Call: <span className="font-normal text-slate-600">Commercial Lead</span></p>
-                            <p className="text-xs text-slate-500">AI Receptionist Active • Recording</p>
-                        </div>
-                    </div>
-                    <div className="space-y-2 text-sm text-slate-600 bg-slate-50 p-3 rounded-lg mb-3">
-                        <p className="italic">"Hello! This is Roloba AI. I see you're looking for a quote on the warehouse HVAC project. I can book a site visit for tomorrow at 10 AM?"</p>
-                    </div>
-                    <div className="flex gap-2">
-                       <button 
-                        onClick={onOpenModal}
-                        className="flex-1 py-2 bg-slate-900 text-white text-xs font-medium rounded hover:bg-slate-800 transition-colors"
-                       >
-                           Listen
-                       </button>
-                       <button 
-                        onClick={onOpenModal}
-                        className="flex-1 py-2 bg-white border border-slate-200 text-slate-700 text-xs font-medium rounded hover:bg-slate-50 transition-colors"
-                       >
-                           View Transcript
-                       </button>
-                    </div>
+             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                <div className="flex -space-x-3 sm:-space-x-4 overflow-hidden">
+                    {[10, 15, 22, 33, 44].map((i) => (
+                        <img
+                            key={i}
+                            className="inline-block h-8 w-8 sm:h-12 sm:w-12 rounded-xl sm:rounded-2xl ring-2 sm:ring-4 ring-brand-cream object-cover grayscale hover:grayscale-0 transition-all"
+                            src={`https://randomuser.me/api/portraits/men/${i}.jpg`}
+                            alt="Top Tree Professional"
+                        />
+                    ))}
                 </div>
-            </div>
+                <div className="text-center sm:text-left">
+                    <p className="text-brand-dark font-black text-[9px] sm:text-sm uppercase tracking-tight">Trusted by 50+ Top American Arborists</p>
+                    <p className="text-brand-green font-bold text-[8px] sm:text-xs uppercase tracking-[0.15em]">Scaling exclusively with Roloba Performance Agency</p>
+                </div>
+             </div>
+        </div>
+        
+        {/* Proof Points */}
+        <div className="mt-16 sm:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-12 w-full max-w-5xl px-4">
+            {[
+                { label: 'High-Ticket Removals', icon: Target },
+                { label: '3 Free Estimates', icon: Gift },
+                { label: 'Pay After Closing', icon: Check },
+                { label: 'Locked Territories', icon: Check }
+            ].map((item, idx) => (
+                <div key={idx} className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-brand-dark font-black text-[8px] sm:text-[10px] uppercase tracking-widest bg-white/40 sm:bg-transparent p-3 sm:p-0 rounded-2xl border border-brand-green/5 sm:border-0">
+                    <div className="bg-brand-green/10 p-2 sm:p-3 rounded-xl">
+                        <item.icon className={`w-3.5 h-3.5 sm:w-5 sm:h-5 ${item.icon === Gift ? 'text-brand-orange' : 'text-brand-green'}`} strokeWidth={4} />
+                    </div>
+                    <span className="text-center">{item.label}</span>
+                </div>
+            ))}
         </div>
 
       </div>
-    </div>
+    </section>
   );
 };
 
